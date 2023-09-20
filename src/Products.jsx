@@ -1,13 +1,18 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import Product from './Product.jsx'
+import {Link, Route} from "react-router-dom";
 
-const Products = () => {
+const Products = ({ match }) => {
     return (
         <>
             <div className="page__content">
                 <h1>Products</h1>
-                <p>We are gonna add some products. A bit later...</p>
-                <Link to="/contacts">To Contacts</Link>
+                <ul className="navigation">
+                    <li className="navigation__item"><Link to={`${match.url}/ball`}>Ball</Link></li>
+                    <li className="navigation__item"><Link to={`${match.url}/book`}>Book</Link></li>
+                </ul>
+                <Route exact path={`${match.url}`}><p>Select a product. Now!</p></Route>
+                <Route path={`${match.url}/:productId`} component={Product} />
             </div>
         </>
     )

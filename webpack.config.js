@@ -5,7 +5,8 @@ const webpack = require('webpack');
 module.exports = {
     entry: './src/index.jsx',
     output: {
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: "/"
     },
     module: {
         rules: [

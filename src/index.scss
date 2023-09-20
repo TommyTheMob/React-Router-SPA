@@ -8,7 +8,34 @@
 }
 
 .page {
-  margin-top: 250px;
+  &__content {
+    text-align: center;
+
+    .navigation {
+      padding-bottom: 0;
+
+
+      justify-content: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-top: 20px;
+    }
+  }
+}
+
+.navigation {
+  padding-bottom: 300px;
+  list-style: none;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
+
+  &__item {
+    margin-right: 10px;
+  }
 }
